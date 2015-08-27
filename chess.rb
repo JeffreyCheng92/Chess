@@ -18,7 +18,7 @@ class Chess
     @end_pos = nil
   end
 
-  def test
+  def play
     seed_board
     @board.render(players.last.cursor)
     begin
@@ -101,4 +101,4 @@ class Chess
 end
 
  g = Chess.new
- g.test
+ g.play
