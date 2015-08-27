@@ -48,8 +48,7 @@ class Chess
   end
 
   def play_turn
-    puts "#{players.first.color.capitalize}'s Turn"
-    puts "Check" if @board.check?(players)
+    game_status
     @start_pos = get_start_move
 
     board.selected_moves = board[start_pos].possible_moves
@@ -61,6 +60,11 @@ class Chess
     board.selected = false
 
     move_piece
+  end
+
+  def game_status
+    puts "#{players.first.color.capitalize}'s Turn"
+    puts "Check" if @board.check?(players)
   end
 
   def change_turn
