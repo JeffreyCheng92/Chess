@@ -20,6 +20,7 @@ class Board
     @grid[0].each_index do |idx|
       self[[0, idx]] = pieces[idx].new(self, [0, idx], "blue")
     end
+    
     @grid[7].each_index do |idx|
       self[[7, idx]] = pieces[idx].new(self, [7, idx], "red")
     end
@@ -51,9 +52,7 @@ class Board
     puts "    A   B   C   D   E   F   G   H"
     @grid.each_with_index do |row, i|
       row_string = row.map.with_index do |piece, j|
-
         cursor_helper(i, j, possible_moves, cursor)
-
       end
       puts "#{i.to_s}  #{row_string.join}"
     end
