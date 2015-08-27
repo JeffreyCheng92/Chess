@@ -55,11 +55,13 @@ module Pawnable
         pos_array << bot_left
       end
     end
+
     if board[bot_right]
       if !board[bot_right].empty? && board[bot_right].color != color
         pos_array << bot_right
       end
     end
+    
   end
 
   def invalid_pos?(board, pos)

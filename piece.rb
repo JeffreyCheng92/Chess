@@ -19,8 +19,6 @@ class Piece
   end
 
   def move!(end_pos)
-    #debugger
-    #available_moves = possible_moves
     board[end_pos] = self.class.new(board, end_pos, color, moved)
     board[@pos] = EmptyPiece.new
     board.render(end_pos)
@@ -46,7 +44,6 @@ class Piece
     board[@pos] = piece
     puts "Can't move into check!"
     board.render(start_pos)
-
   end
 
 end
@@ -73,7 +70,6 @@ class Rook < Piece
   def move(end_pos)
     super
   end
-
 
   def possible_moves
     get_moves(board, pos, MOVE_VECTORS, color)
@@ -236,7 +232,6 @@ class Pawn < Piece
     else
       get_moves(board, pos, move_vectors) + attack_moves(board, pos, color)
     end
-
   end
 
 end
