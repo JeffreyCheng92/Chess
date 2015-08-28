@@ -12,4 +12,4 @@ Type "ruby chess.rb" into the command line.
 Use the arrow keys to move the cursor and enter to confirm input.
 
 # SCREENSHOT
-![./chess_image.png]
+![game_preview](./chess_image.png)
