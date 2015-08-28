@@ -1,6 +1,4 @@
 module Steppable
-
-
   def get_moves(board, current_pos, vectors, color)
     positions = []
 
@@ -37,5 +35,4 @@ module Steppable
   def inside_boundaries?(pos)
     pos.all? { |el| el.between?(0, 7) }
   end
-
 end
