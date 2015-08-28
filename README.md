@@ -10,3 +10,6 @@ Ruby must be installed. (At least version 2.0.0)
 
 Type "ruby chess.rb" into the command line.
 Use the arrow keys to move the cursor and enter to confirm input.
+
+# SCREENSHOT
+./chess_image.png
