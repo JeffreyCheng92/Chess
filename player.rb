@@ -6,9 +6,7 @@ class Player
   attr_reader :color
 
   def initialize(board, color)
-    @cursor = [0, 0]
-    @board = board
-    @color = color
+    @cursor, @board, @color = [0, 0], board, color
   end
 
   KEYS = [
@@ -21,15 +19,13 @@ class Player
 
   def move_cursor
       while true
-        char = read_char
-        break unless handle_cursor(char)
+        break unless handle_cursor(read_char)
       end
 
       cursor
   end
 
   private
-
 
   def handle_cursor(input)
     row, col = cursor
